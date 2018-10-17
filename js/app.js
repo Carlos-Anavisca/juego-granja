@@ -74,3 +74,7 @@ function dibujar(){
         lapiz.drawImage(cuchillo.imagen,225,175);
     }
 }
+
+function movimiento(evento){
+    console.log(eento);
+}
