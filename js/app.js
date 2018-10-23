@@ -1,4 +1,5 @@
 document.addEventListener("keydown",movimiento);
+
 var canvas = document.getElementById('fondo');
 var lapiz = canvas.getContext('2d');
 var matriz = new Array(6)
@@ -7,10 +8,7 @@ const DIMENSION = 80;
 var x =random(0,5)*DIMENSION;
 var y = random(0,5)*DIMENSION;
 
-iniciarMatriz();
-inicializarVacas();
-inicializarCerdos();
-dibujarMatriz();
+
 
 //---------------------------------------------------------------------------------
 
@@ -59,18 +57,23 @@ fondo.imagen.addEventListener("load", function(){
 
 vaca.imagen.addEventListener("load", function(){
     vaca.cargaOk=true
-    lapiz.drawImage(vaca.imagen,150,100);
+    dibujar();
 });
 
 cerdo.imagen.addEventListener("load", function(){
     cerdo.cargaOk=true
-    lapiz.drawImage(cerdo.imagen,200,205);
+    dibujar();
 });
 
 cuchillo.imagen.addEventListener("load", function(){
     cuchillo.cargaOk=true
-    lapiz.drawImage(cuchillo.imagen,x,y);
+    dibujar();
 });
+
+iniciarMatriz();
+inicializarVacas();
+inicializarCerdos();
+dibujar();
 
 //---------------------------------------------------------------------------------
 
